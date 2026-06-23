@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Parras Valley - Panel</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:linear-gradient(160deg,#0a1a0a 0%,#0d1f1a 50%,#0a150d 100%);min-height:100vh;color:#f0ede8;font-family:system-ui,sans-serif;}
+    a{text-decoration:none;color:inherit;}
+    .card{display:flex;align-items:center;gap:16px;border-radius:16px;padding:18px 20px;cursor:pointer;transition:transform 0.15s,box-shadow 0.15s;border:2px solid transparent;}
+    .card:hover{transform:translateY(-2px);}
+    .card:active{transform:scale(0.97);}
+    .icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;font-weight:900;}
+    .section-title{font-size:13px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:#86efac;margin-bottom:12px;padding-left:4px;border-left:4px solid #22c55e;padding-left:10px;}
+    .arrow{margin-left:auto;font-size:20px;font-weight:900;opacity:0.5;}
+    ::-webkit-scrollbar{width:14px;}
+    ::-webkit-scrollbar-track{background:rgba(255,255,255,0.03);}
+    ::-webkit-scrollbar-thumb{background:rgba(34,197,94,0.4);border-radius:7px;border:3px solid transparent;background-clip:padding-box;}
+  </style>
+</head>
+<body>
+<div style="max-width:1100px;margin:0 auto;padding:28px 20px 60px;">
+
+  <!-- Header -->
+  <div style="text-align:center;margin-bottom:36px;padding-top:12px;">
+    <div style="display:inline-block;background:linear-gradient(135deg,#14532d,#166534);border-radius:20px;padding:12px 28px;margin-bottom:14px;box-shadow:0 4px 24px rgba(34,197,94,0.3);">
+      <div style="font-size:11px;font-weight:800;letter-spacing:4px;color:#86efac;margin-bottom:3px;">EMPACADORA</div>
+      <div style="font-size:28px;font-weight:900;color:#ffffff;letter-spacing:2px;">PARRAS VALLEY</div>
+    </div>
+    <div style="font-size:13px;color:#4a6a4a;">Selecciona una aplicacion</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(460px,1fr));gap:28px;align-items:start;">
+  <!-- CALIDAD -->
+  <div style="margin-bottom:28px;">
+    <div class="section-title">Control de Calidad</div>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+
+      <a href="https://parrasvalley.github.io/qc-recibo" target="_blank">
+        <div class="card" style="background:linear-gradient(135deg,rgba(56,189,248,0.12),rgba(14,116,144,0.08));border-color:rgba(56,189,248,0.35);box-shadow:0 4px 20px rgba(56,189,248,0.1);">
+          <div class="icon" style="background:linear-gradient(135deg,#0e7490,#38bdf8);box-shadow:0 4px 12px rgba(56,189,248,0.4);">QC</div>
+          <div>
+            <div style="font-size:17px;font-weight:900;color:#38bdf8;">QC Recibo</div>
+            <div style="font-size:12px;color:#4a7a8a;margin-top:2px;">Calidad en recepcion de fruta</div>
+          </div>
+          <div class="arrow" style="color:#38bdf8;">></div>
+        </div>
+      </a>
+
+      <a href="https://parrasvalley.github.io/qc-terminado" target="_blank">
+        <div class="card" style="background:linear-gradient(135deg,rgba(34,197,94,0.12),rgba(21,128,61,0.08));border-color:rgba(34,197,94,0.35);box-shadow:0 4px 20px rgba(34,197,94,0.1);">
+          <div class="icon" style="background:linear-gradient(135deg,#15803d,#22c55e);box-shadow:0 4px 12px rgba(34,197,94,0.4);">OK</div>
+          <div>
+            <div style="font-size:17px;font-weight:900;color:#22c55e;">QC Producto Terminado</div>
+            <div style="font-size:12px;color:#4a7a5a;margin-top:2px;">Evaluacion de calidad en linea</div>
+          </div>
+          <div class="arrow" style="color:#22c55e;">></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- PRODUCCION -->
+  <div style="margin-bottom:28px;">
+    <div class="section-title">Produccion</div>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+
+      <a href="https://parrasvalley.github.io/produccion" target="_blank">
+        <div class="card" style="background:linear-gradient(135deg,rgba(74,222,128,0.12),rgba(21,128,61,0.08));border-color:rgba(74,222,128,0.35);box-shadow:0 4px 20px rgba(74,222,128,0.1);">
+          <div class="icon" style="background:linear-gradient(135deg,#166534,#4ade80);box-shadow:0 4px 12px rgba(74,222,128,0.4);">CF</div>
+          <div>
+            <div style="font-size:17px;font-weight:900;color:#4ade80;">Produccion / Cuarto Frio</div>
+            <div style="font-size:12px;color:#4a7a5a;margin-top:2px;">Pallets, inventario y embarques</div>
+          </div>
+          <div class="arrow" style="color:#4ade80;">></div>
+        </div>
+      </a>
+
+      <a href="https://parrasvalley.github.io/recibo-fruta" target="_blank">
+        <div class="card" style="background:linear-gradient(135deg,rgba(167,139,250,0.12),rgba(109,40,217,0.08));border-color:rgba(167,139,250,0.35);box-shadow:0 4px 20px rgba(167,139,250,0.1);">
+          <div class="icon" style="background:linear-gradient(135deg,#6d28d9,#a78bfa);box-shadow:0 4px 12px rgba(167,139,250,0.4);">RF</div>
+          <div>
+            <div style="font-size:17px;font-weight:900;color:#a78bfa;">Recibo de Fruta</div>
+            <div style="font-size:12px;color:#6a5a8a;margin-top:2px;">Control de lotes y rejas por linea</div>
+          </div>
+          <div class="arrow" style="color:#a78bfa;">></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- RENDIMIENTOS -->
+  <div style="margin-bottom:28px;">
+    <div class="section-title">Rendimientos de Empaque</div>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+
+      <a href="https://parrasvalley.github.io/rendimiento-europeo" target="_blank">
+        <div class="card" style="background:linear-gradient(135deg,rgba(192,132,252,0.12),rgba(126,34,206,0.08));border-color:rgba(192,132,252,0.35);box-shadow:0 4px 20px rgba(192,132,252,0.1);">
+          <div class="icon" style="background:linear-gradient(135deg,#7e22ce,#c084fc);box-shadow:0 4px 12px rgba(192,132,252,0.4);">EU</div>
+          <div>
+            <div style="font-size:17px;font-weight:900;color:#c084fc;">Rendimiento Europeo</div>
+            <div style="font-size:12px;color:#6a5a8a;margin-top:2px;">1ra, 2da, 3ra y merma por malla</div>
+          </div>
+          <div class="arrow" style="color:#c084fc;">></div>
+        </div>
+      </a>
+
+      <a href="https://parrasvalley.github.io/rendimiento-persa" target="_blank">
+        <div class="card" style="background:linear-gradient(135deg,rgba(34,197,94,0.12),rgba(21,128,61,0.08));border-color:rgba(34,197,94,0.35);box-shadow:0 4px 20px rgba(34,197,94,0.1);">
+          <div class="icon" style="background:linear-gradient(135deg,#15803d,#22c55e);box-shadow:0 4px 12px rgba(34,197,94,0.4);">PE</div>
+          <div>
+            <div style="font-size:17px;font-weight:900;color:#22c55e;">Rendimiento Persa</div>
+            <div style="font-size:12px;color:#4a7a5a;margin-top:2px;">1ra, 2da, Choice y merma por malla</div>
+          </div>
+          <div class="arrow" style="color:#22c55e;">></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- COSTOS -->
+  <div style="margin-bottom:28px;">
+    <div class="section-title">Costos y Proyecciones</div>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+
+      <a href="https://parrasvalley.github.io/gastos" target="_blank">
+        <div class="card" style="background:linear-gradient(135deg,rgba(251,191,36,0.12),rgba(180,83,9,0.08));border-color:rgba(251,191,36,0.35);box-shadow:0 4px 20px rgba(251,191,36,0.1);">
+          <div class="icon" style="background:linear-gradient(135deg,#b45309,#fbbf24);box-shadow:0 4px 12px rgba(251,191,36,0.4);">$</div>
+          <div>
+            <div style="font-size:17px;font-weight:900;color:#fbbf24;">Gastos</div>
+            <div style="font-size:12px;color:#7a6a3a;margin-top:2px;">Costos por linea, bulto y hora</div>
+          </div>
+          <div class="arrow" style="color:#fbbf24;">></div>
+        </div>
+      </a>
+
+      <a href="https://parrasvalley.github.io/proyeccion-morron" target="_blank">
+        <div class="card" style="background:linear-gradient(135deg,rgba(248,113,113,0.12),rgba(185,28,28,0.08));border-color:rgba(248,113,113,0.35);box-shadow:0 4px 20px rgba(248,113,113,0.1);">
+          <div class="icon" style="background:linear-gradient(135deg,#b91c1c,#f87171);box-shadow:0 4px 12px rgba(248,113,113,0.4);">MO</div>
+          <div>
+            <div style="font-size:17px;font-weight:900;color:#f87171;">Proyeccion Morron</div>
+            <div style="font-size:12px;color:#7a4a4a;margin-top:2px;">Proyeccion semanal PV + Fepo</div>
+          </div>
+          <div class="arrow" style="color:#f87171;">></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  </div>
+  <!-- Hora -->
+  <div style="text-align:center;margin-top:20px;">
+    <div style="font-size:11px;color:#2d3748;" id="reloj"></div>
+  </div>
+
+</div>
+<script>
+function tick(){
+  var now=new Date();
+  document.getElementById("reloj").textContent=now.toLocaleDateString("es-MX",{weekday:"long",day:"2-digit",month:"long",year:"numeric",hour:"2-digit",minute:"2-digit"});
+}
+tick();setInterval(tick,30000);
+</script>
+</body>
+</html>
