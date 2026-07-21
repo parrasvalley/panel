@@ -179,19 +179,19 @@ body{background:linear-gradient(160deg,#052e16 0%,#064e3b 40%,#065f46 100%);colo
         <div class="cat-label">Producción y Operaciones</div>
       </div>
       <div class="cat-body">
-        <a class="app-card" href="produccion.html">
+        <a class="app-card" href="../produccion/">
           <span class="app-icon">🏭</span>
           <div class="app-name">Producción</div>
           <div class="app-desc">Registro diario de empaque, inventario en cuarto frío, bajas y pedidos</div>
           <div class="app-arrow">→</div>
         </a>
-        <a class="app-card" href="embarques.html">
+        <a class="app-card" href="../embarques/">
           <span class="app-icon">🚛</span>
           <div class="app-name">Embarques</div>
           <div class="app-desc">Inventario de cargas, unidades, manifiestos y cruces fronterizos</div>
           <div class="app-arrow">→</div>
         </a>
-        <a class="app-card" href="recibo-inventario.html">
+        <a class="app-card" href="../recibo-inventario/">
           <span class="app-icon">📦</span>
           <div class="app-name">Recibo de Fruta</div>
           <div class="app-desc">Entrada de producto del campo, rejas por rancho y malla</div>
@@ -207,19 +207,19 @@ body{background:linear-gradient(160deg,#052e16 0%,#064e3b 40%,#065f46 100%);colo
         <div class="cat-label">Rendimientos</div>
       </div>
       <div class="cat-body">
-        <a class="app-card" href="control-empaque.html">
+        <a class="app-card" href="../control-empaque/">
           <span class="app-icon">📊</span>
           <div class="app-name">Control de Empaque</div>
           <div class="app-desc">Rendimientos reales por malla, rancho y porcentajes de calidad</div>
           <div class="app-arrow">→</div>
         </a>
-        <a class="app-card" href="campo-proyeccion.html">
+        <a class="app-card" href="../campo-proyeccion/">
           <span class="app-icon">🌱</span>
           <div class="app-name">Proyección Campo</div>
           <div class="app-desc">Proyección semanal de corte por rancho y cultivo</div>
           <div class="app-arrow">→</div>
         </a>
-        <a class="app-card" href="proyeccion-empaque.html">
+        <a class="app-card" href="../proyeccion-empaque/">
           <span class="app-icon">📈</span>
           <div class="app-name">Proyección Empaque</div>
           <div class="app-desc">Estimado de cajas a empacar por presentación y fecha</div>
@@ -235,13 +235,13 @@ body{background:linear-gradient(160deg,#052e16 0%,#064e3b 40%,#065f46 100%);colo
         <div class="cat-label">Calidad</div>
       </div>
       <div class="cat-body">
-        <a class="app-card" href="qc-recibo.html">
+        <a class="app-card" href="../qc-recibo/">
           <span class="app-icon">🔍</span>
           <div class="app-name">QC Recibo</div>
           <div class="app-desc">Control de calidad en recepción de fruta directamente del campo</div>
           <div class="app-arrow">→</div>
         </a>
-        <a class="app-card" href="qc-terminado.html">
+        <a class="app-card" href="../qc-terminado/">
           <span class="app-icon">✅</span>
           <div class="app-name">QC Producto Terminado</div>
           <div class="app-desc">Inspección final de calidad en producto empacado listo para embarque</div>
@@ -257,13 +257,13 @@ body{background:linear-gradient(160deg,#052e16 0%,#064e3b 40%,#065f46 100%);colo
         <div class="cat-label">Costos y Personal</div>
       </div>
       <div class="cat-body">
-        <a class="app-card" href="extras.html">
+        <a class="app-card" href="../extras/">
           <span class="app-icon">⏰</span>
           <div class="app-name">Extras</div>
           <div class="app-desc">Control de horas extra por turno y departamento</div>
           <div class="app-arrow">→</div>
         </a>
-        <a class="app-card" href="gastos.html">
+        <a class="app-card" href="../gastos/">
           <span class="app-icon">💰</span>
           <div class="app-name">Gastos</div>
           <div class="app-desc">Registro y seguimiento de gastos operativos diarios</div>
@@ -289,6 +289,19 @@ function tick(){
     (h<10?"0":"")+h+":"+(m<10?"0":"")+m+"</span>";
 }
 tick();setInterval(tick,10000);
+
+// Efecto 3D - las tarjetas siguen el movimiento del mouse
+document.querySelectorAll('.app-card').forEach(function(card){
+  card.addEventListener('mousemove',function(e){
+    var r=card.getBoundingClientRect();
+    var x=(e.clientX-r.left)/r.width-0.5;
+    var y=(e.clientY-r.top)/r.height-0.5;
+    card.style.transform='translateY(-6px) rotateX('+(y*-10)+'deg) rotateY('+(x*10)+'deg) scale(1.03)';
+  });
+  card.addEventListener('mouseleave',function(){
+    card.style.transform='';
+  });
+});
 </script>
 </body>
 </html>
